@@ -1,0 +1,10 @@
+{
+  "tests": [
+    {
+      "name": "Get chat ids",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}
