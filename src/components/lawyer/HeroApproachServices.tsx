@@ -141,7 +141,7 @@ export default function HeroApproachServices({ onCallbackOpen }: HeroApproachSer
                 Telegram
               </a>
               <a
-                href="https://max.ru/+79784564217"
+                href="https://max.ru/im?phone=79784564217"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2.5 rounded text-white text-sm font-golos font-medium transition-opacity hover:opacity-90"
