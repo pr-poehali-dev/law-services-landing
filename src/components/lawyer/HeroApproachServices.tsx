@@ -73,8 +73,8 @@ export default function HeroApproachServices({ onCallbackOpen }: HeroApproachSer
                 <img
                   src={LAWYER_PHOTO}
                   alt="Поварчук Илья Валентинович — юрист"
-                  className="relative rounded-2xl w-full max-w-sm object-cover shadow-2xl"
-                  style={{ maxHeight: "480px" }}
+                  className="relative rounded-2xl w-full max-w-lg object-cover shadow-2xl"
+                  style={{ maxHeight: "580px" }}
                 />
                 <div className="absolute -bottom-4 -left-4 bg-white rounded-xl px-4 py-3 shadow-xl">
                   <div className="flex items-center gap-2">
