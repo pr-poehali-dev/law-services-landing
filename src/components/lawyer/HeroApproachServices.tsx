@@ -126,7 +126,7 @@ export default function HeroApproachServices({ onCallbackOpen }: HeroApproachSer
               </div>
               <div>
                 <div className="font-golos font-semibold text-navy">Онлайн-консультация в реальном времени</div>
-                <div className="text-sm text-gray-500 font-golos">Telegram, WhatsApp, телефонный звонок — выберите удобный способ</div>
+                <div className="text-sm text-gray-500 font-golos">Telegram, Max, телефонный звонок — выберите удобный способ</div>
               </div>
             </div>
             <div className="flex gap-3 flex-shrink-0">
