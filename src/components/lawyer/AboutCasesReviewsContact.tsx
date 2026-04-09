@@ -189,14 +189,17 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
 
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             {reviews.map((r) => (
-              <div key={r.name} className="bg-cream rounded-xl p-6">
+              <div key={r.name} className="bg-cream rounded-xl p-6 flex flex-col">
                 <div className="flex items-center gap-1 mb-4">
                   {[1,2,3,4,5].map((i) => (
                     <Icon key={i} name="Star" size={14} color="#B68B40" />
                   ))}
                 </div>
-                <p className="text-gray-600 text-sm font-golos leading-relaxed mb-4 italic">«{r.text}»</p>
-                <div className="font-golos font-semibold text-navy text-sm">{r.name}</div>
+                <p className="text-gray-600 text-sm font-golos leading-relaxed mb-4 italic flex-1">«{r.text}»</p>
+                <div>
+                  <div className="font-golos font-semibold text-navy text-sm">{r.name}</div>
+                  <div className="text-xs text-gray-400 font-golos mt-0.5">{r.source}</div>
+                </div>
               </div>
             ))}
           </div>
