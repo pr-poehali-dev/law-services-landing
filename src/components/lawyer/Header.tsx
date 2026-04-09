@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
-import { PHONE, PHONE_HREF, navLinks } from "./constants";
+import { PHONE, PHONE_HREF, TELEGRAM, navLinks } from "./constants";
 
 const SEND_LEAD_URL = "https://functions.poehali.dev/a891f966-5f82-4ff0-9f72-1c3098e4fbff";
 
@@ -180,10 +180,34 @@ export default function Header({ onCallbackOpen, callbackOpen, onCallbackClose }
         </nav>
 
         <div className="px-6 pb-8 space-y-3">
-          <a href={PHONE_HREF} className="flex items-center gap-2 py-2 font-golos font-semibold text-sm" style={{ color: "var(--gold)" }}>
+          <a href={PHONE_HREF} className="flex items-center gap-2 py-2 font-golos font-semibold text-sm border-b border-gray-100" style={{ color: "var(--gold)" }}>
             <Icon name="Phone" size={15} />
             {PHONE}
           </a>
+
+          <div className="flex gap-2 pt-1">
+            <a
+              href={TELEGRAM}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded text-white text-sm font-golos font-medium transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#229ED9" }}
+            >
+              <Icon name="Send" size={14} />
+              Telegram
+            </a>
+            <a
+              href="https://max.ru/im?phone=79784564217"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded text-white text-sm font-golos font-medium transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#0077FF" }}
+            >
+              <Icon name="MessageCircle" size={14} />
+              Max
+            </a>
+          </div>
+
           <button
             onClick={() => { onCallbackOpen(); setMenuOpen(false); }}
             className="w-full py-3 rounded text-white text-sm font-golos font-semibold transition-opacity hover:opacity-90"
