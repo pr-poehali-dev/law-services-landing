@@ -177,7 +177,7 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
           </div>
           <div className="text-center">
             <a
-              href="https://vc.ru"
+              href="https://vc.ru/id1663201"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-golos font-medium transition-colors"
