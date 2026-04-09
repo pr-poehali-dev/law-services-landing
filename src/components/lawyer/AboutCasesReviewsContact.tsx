@@ -61,7 +61,21 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
             </div>
 
             <div className="flex flex-col gap-6">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div
+                className="relative rounded-2xl overflow-hidden"
+                style={{
+                  boxShadow: "0 8px 20px -8px rgba(0,0,0,0.2)",
+                  transition: "transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLDivElement).style.transform = "translateY(-8px)";
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = "0 20px 30px -15px rgba(0,0,0,0.25)";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 20px -8px rgba(0,0,0,0.2)";
+                }}
+              >
                 <img
                   src="https://cdn.poehali.dev/files/05d74c33-dcb6-40dd-9ee0-d8470af725a0.png"
                   alt="Поварчук Илья Валентинович — юрист в офисе"

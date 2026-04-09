@@ -68,13 +68,25 @@ export default function HeroApproachServices({ onCallbackOpen }: HeroApproachSer
             </div>
 
             <div className="animate-fade-in-delay-2 flex justify-center lg:justify-end">
-              <div className="relative">
+              <div className="relative group" style={{ transition: "transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)" }}>
                 <div className="absolute -inset-4 rounded-2xl opacity-20" style={{ background: "var(--gold)", filter: "blur(24px)" }}></div>
                 <img
                   src={LAWYER_PHOTO}
                   alt="Поварчук Илья Валентинович — юрист"
-                  className="relative rounded-2xl w-full max-w-lg object-cover shadow-2xl"
-                  style={{ maxHeight: "580px" }}
+                  className="relative rounded-2xl w-full max-w-lg object-cover"
+                  style={{
+                    maxHeight: "580px",
+                    boxShadow: "0 8px 20px -8px rgba(0,0,0,0.2)",
+                    transition: "transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLImageElement).style.transform = "translateY(-8px)";
+                    (e.currentTarget as HTMLImageElement).style.boxShadow = "0 20px 30px -15px rgba(0,0,0,0.25)";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLImageElement).style.transform = "translateY(0)";
+                    (e.currentTarget as HTMLImageElement).style.boxShadow = "0 8px 20px -8px rgba(0,0,0,0.2)";
+                  }}
                 />
                 <div className="absolute -bottom-4 -left-4 bg-white rounded-xl px-4 py-3 shadow-xl">
                   <div className="flex items-center gap-2">
