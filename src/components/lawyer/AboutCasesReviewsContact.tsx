@@ -157,10 +157,21 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             {cases.map((c) => (
-              <div key={c.title} className="bg-white rounded-xl p-7 border border-gray-100 hover:border-[#B68B40] transition-colors">
-                <div className="font-cormorant text-3xl font-bold mb-1" style={{ color: "var(--gold)" }}>{c.amount}</div>
-                <div className="font-golos font-semibold text-navy mb-2">{c.title}</div>
-                <div className="text-sm text-gray-500 font-golos">{c.desc}</div>
+              <div key={c.title} className="bg-white rounded-xl p-6 border border-gray-100 hover:border-[#B68B40] transition-colors flex flex-col gap-3">
+                <div className="flex items-center justify-between gap-2 flex-wrap">
+                  <span className="text-[11px] font-golos font-medium text-gray-400 uppercase tracking-wider">{c.number}</span>
+                  <span className="text-[11px] font-golos px-2 py-0.5 rounded-full" style={{ backgroundColor: "var(--cream)", color: "var(--gold)" }}>{c.tag}</span>
+                </div>
+                <div>
+                  <div className="font-cormorant text-2xl font-bold leading-tight" style={{ color: "var(--gold)" }}>{c.amount}</div>
+                  <div className="font-golos font-semibold text-navy mt-0.5">{c.title}</div>
+                </div>
+                <p className="text-sm text-gray-500 font-golos leading-relaxed flex-1">{c.desc}</p>
+                <div className="flex items-center gap-2 pt-2 border-t border-gray-100">
+                  <Icon name="CheckCircle" size={14} color="#B68B40" />
+                  <span className="text-xs font-golos text-gray-500">{c.result}</span>
+                </div>
+                <div className="text-[11px] text-gray-400 font-golos">{c.court}</div>
               </div>
             ))}
           </div>
