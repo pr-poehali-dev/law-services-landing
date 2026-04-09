@@ -98,6 +98,17 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
                   <Icon name="ArrowRight" size={16} color="#B68B40" className="ml-auto" />
                 </a>
 
+                <a href="https://max.ru/+79784564217" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "#0077FF" }}>
+                    <Icon name="MessageCircle" size={18} color="white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-golos font-semibold">Max</div>
+                    <div className="text-blue-200 text-xs font-golos">Написать сообщение в Max</div>
+                  </div>
+                  <Icon name="ArrowRight" size={16} color="#B68B40" className="ml-auto" />
+                </a>
+
                 <a href={`mailto:${EMAIL}`} className="flex items-center gap-4 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
                   <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "var(--gold)" }}>
                     <Icon name="Mail" size={18} color="white" />
