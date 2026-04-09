@@ -373,7 +373,7 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
 
           <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
             <p className="text-xs font-golos text-gray-500">© 2024 Поварчук и Партнеры. Все права защищены.</p>
-            <p className="text-xs font-golos text-gray-600">Регистрация домена: Nethouse</p>
+
           </div>
         </div>
       </footer>
