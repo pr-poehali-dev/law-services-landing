@@ -355,7 +355,7 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
               <div className="text-white font-golos font-semibold text-sm mb-4">Соцсети и отзывы</div>
               <div className="space-y-2">
                 {[
-                  { label: "ВКонтакте", href: "https://vk.com" },
+                  { label: "ВКонтакте", href: "https://vk.com/povpartner" },
                   { label: "Telegram", href: TELEGRAM },
                   { label: "Одноклассники", href: "https://ok.ru" },
                   { label: "Яндекс.Бизнес", href: "https://yandex.ru/maps" },
