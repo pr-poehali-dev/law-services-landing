@@ -60,6 +60,17 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
               </div>
             </div>
 
+            <div className="flex flex-col gap-6">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="https://cdn.poehali.dev/files/05d74c33-dcb6-40dd-9ee0-d8470af725a0.png"
+                  alt="Поварчук Илья Валентинович — юрист в офисе"
+                  className="w-full object-cover object-top"
+                  style={{ maxHeight: "340px" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
+              </div>
+
             <div className="rounded-2xl p-8 text-white" style={{ background: "linear-gradient(135deg, #1A2A4F 0%, #263666 100%)" }}>
               <h3 className="font-cormorant text-2xl font-semibold mb-2">Связаться прямо сейчас</h3>
               <p className="text-blue-200 text-sm font-golos mb-8">Выберите удобный способ онлайн-консультации</p>
@@ -106,6 +117,7 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
               >
                 Жду звонка — перезвоните мне
               </button>
+            </div>
             </div>
           </div>
         </div>
