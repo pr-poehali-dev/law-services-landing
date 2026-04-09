@@ -218,7 +218,7 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
           <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto">
             {[
               { icon: "Star", label: "Яндекс.Бизнес", sub: "Читать все отзывы", href: "https://yandex.ru/maps/org/povarchuk_i_partnyory/7292132270/reviews/?ll=33.485610%2C44.581079&z=17", color: "#FC3F1D" },
-              { icon: "ShoppingBag", label: "Авито", sub: "Отзывы на Авито", href: "https://avito.ru", color: "#00AAFF" },
+              { icon: "ShoppingBag", label: "Авито", sub: "Отзывы на Авито", href: "https://www.avito.ru/brands/9a3c45fd92904ef892d74f00ffca87ed", color: "#00AAFF" },
             ].map((pl) => (
               <a
                 key={pl.label}
