@@ -2,6 +2,8 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { PHONE, PHONE_HREF, TELEGRAM, EMAIL, cases, reviews } from "./constants";
 
+const SEND_LEAD_URL = "https://functions.poehali.dev/a891f966-5f82-4ff0-9f72-1c3098e4fbff";
+
 interface AboutCasesReviewsContactProps {
   onCallbackOpen: () => void;
 }
@@ -9,10 +11,21 @@ interface AboutCasesReviewsContactProps {
 export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesReviewsContactProps) {
   const [formData, setFormData] = useState({ name: "", phone: "", comment: "" });
   const [formSent, setFormSent] = useState(false);
+  const [formLoading, setFormLoading] = useState(false);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSent(true);
+    setFormLoading(true);
+    try {
+      await fetch(SEND_LEAD_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, source: "form" }),
+      });
+    } finally {
+      setFormLoading(false);
+      setFormSent(true);
+    }
   };
 
   return (
@@ -246,10 +259,11 @@ export default function AboutCasesReviewsContact({ onCallbackOpen }: AboutCasesR
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-lg font-golos font-semibold text-white transition-opacity hover:opacity-90"
+                    disabled={formLoading}
+                    className="w-full py-4 rounded-lg font-golos font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
                     style={{ backgroundColor: "var(--navy)" }}
                   >
-                    Отправить заявку
+                    {formLoading ? "Отправляем..." : "Отправить заявку"}
                   </button>
                   <p className="text-center text-[11px] text-gray-400 font-golos">
                     Нажимая «Отправить», вы соглашаетесь на обработку персональных данных

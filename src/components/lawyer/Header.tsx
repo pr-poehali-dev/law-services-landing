@@ -2,14 +2,27 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { PHONE, PHONE_HREF, navLinks } from "./constants";
 
+const SEND_LEAD_URL = "https://functions.poehali.dev/a891f966-5f82-4ff0-9f72-1c3098e4fbff";
+
 function CallbackModal({ onClose }: { onClose: () => void }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setLoading(true);
+    try {
+      await fetch(SEND_LEAD_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, source: "callback" }),
+      });
+    } finally {
+      setLoading(false);
+      setSent(true);
+    }
   };
 
   return (
@@ -52,10 +65,11 @@ function CallbackModal({ onClose }: { onClose: () => void }) {
               />
               <button
                 type="submit"
-                className="w-full py-3 rounded font-golos font-semibold text-white text-sm transition-all hover:opacity-90"
+                disabled={loading}
+                className="w-full py-3 rounded font-golos font-semibold text-white text-sm transition-all hover:opacity-90 disabled:opacity-60"
                 style={{ backgroundColor: "var(--navy)" }}
               >
-                Жду звонка
+                {loading ? "Отправляем..." : "Жду звонка"}
               </button>
             </form>
           </>
