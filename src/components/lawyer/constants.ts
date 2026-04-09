@@ -2,7 +2,7 @@ export const PHONE = "+7 (978) 456-42-17";
 export const PHONE_HREF = "tel:+79784564217";
 export const TELEGRAM = "https://t.me/povpartner";
 export const EMAIL = "povpartner@mail.ru";
-export const LAWYER_PHOTO = "https://cdn.poehali.dev/projects/5f091524-28cf-4100-b80e-cf5725f65b41/files/9ddd204d-09ab-46b8-bf16-5646be890167.jpg";
+export const LAWYER_PHOTO = "https://cdn.poehali.dev/files/b527a9f3-bc95-4a4f-bb45-175eeaef09fd.png";
 
 export const services = [
   { icon: "Briefcase", title: "Арбитражные споры", desc: "Представительство в арбитражных судах по коммерческим спорам любой сложности" },
