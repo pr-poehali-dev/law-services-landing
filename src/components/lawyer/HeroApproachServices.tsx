@@ -42,9 +42,7 @@ export default function HeroApproachServices({ onCallbackOpen }: HeroApproachSer
                   Получить консультацию
                 </button>
                 <a
-                  href="https://yandex.ru/maps/org/povarchuk_i_partnery"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#reviews"
                   className="flex items-center justify-center gap-2 px-7 py-4 rounded border font-golos text-sm text-white transition-all hover:bg-white/10"
                   style={{ borderColor: "rgba(255,255,255,0.3)" }}
                 >
