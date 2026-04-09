@@ -9,7 +9,7 @@ import urllib.request
 def handler(event: dict, context) -> dict:
     headers = {"Access-Control-Allow-Origin": "*"}
 
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "") or "8004011412:AAEIyCfeEpNsv7NjWaLLeVngfuAeJQub6Hw"
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     if not token:
         return {"statusCode": 500, "headers": headers, "body": {"error": "no token"}}
 

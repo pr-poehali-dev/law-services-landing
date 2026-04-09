@@ -10,7 +10,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 
-TELEGRAM_CHAT_ID = "79780614696"
+TELEGRAM_CHAT_ID = "1063450491"
 FROM_EMAIL = "povpartner@mail.ru"
 TO_EMAIL = "povpartner@mail.ru"
 SMTP_HOST = "smtp.mail.ru"
