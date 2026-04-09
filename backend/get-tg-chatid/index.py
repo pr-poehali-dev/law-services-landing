@@ -1,5 +1,5 @@
 """
-Вспомогательная функция: получить chat_id последнего написавшего боту пользователя. v3
+Вспомогательная функция: получить chat_id последнего написавшего боту пользователя. v4
 """
 import json
 import os
@@ -9,7 +9,7 @@ import urllib.request
 def handler(event: dict, context) -> dict:
     headers = {"Access-Control-Allow-Origin": "*"}
 
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "") or "8004011412:AAEIyCfeEpNsv7NjWaLLeVngfuAeJQub6Hw"
     if not token:
         return {"statusCode": 500, "headers": headers, "body": {"error": "no token"}}
 
