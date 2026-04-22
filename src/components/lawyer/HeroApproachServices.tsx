@@ -25,9 +25,10 @@ export default function HeroApproachServices({ onCallbackOpen }: HeroApproachSer
               <h1 className="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Поварчук<br />
                 <span className="italic font-light" style={{ color: "var(--gold-light)" }}>Илья Валентинович</span>
+                <span className="block text-2xl sm:text-3xl font-normal mt-2" style={{ color: "var(--gold-light)" }}>— юрист онлайн по всей России</span>
               </h1>
               <p className="text-blue-100 text-base lg:text-lg mb-4 font-golos leading-relaxed max-w-lg">
-                Юридическая помощь гражданам и бизнесу. Бесплатный первичный анализ. Работа официально с договором.
+                Юридическая помощь гражданам и бизнесу. Арбитраж, семейные споры, трудовые споры, защита прав потребителей. Бесплатный первичный анализ. Работа официально с договором.
               </p>
               <p className="text-blue-200 text-sm mb-8 font-golos italic">
                 «Репутация и честное отношение к клиенту — основа моей практики»
